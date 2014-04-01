@@ -31,7 +31,7 @@ namespace ITPPROTO
         {
             MySqlConnection connection = new MySqlConnection(myConnectionString);
             MySqlCommand command = connection.CreateCommand();
-            command.CommandText = "SELECT * FROM artikel Where istSKI is true";
+            command.CommandText = "SELECT count(*), marke FROM artikel Where istSKI is true group by marke";
             MySqlDataReader Reader;
             connection.Open();
             Reader = command.ExecuteReader();
@@ -39,7 +39,14 @@ namespace ITPPROTO
             {
                 string row = "";
                 for (int i = 0; i < Reader.FieldCount; i++)
-                    row += Reader.GetValue(i).ToString() + ", ";
+                    if (i == Reader.FieldCount - 1)
+                    {
+                        row += Reader.GetValue(i).ToString();
+                    }
+                    else
+                    {
+                        row += Reader.GetValue(i).ToString() + ", ";
+                    }
                 //Console.WriteLine(row);
                 tbox_LOG_bottom.Text = tbox_LOG_bottom.Text + row+ "\r\n";
             }
