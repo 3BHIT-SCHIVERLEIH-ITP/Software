@@ -299,12 +299,14 @@
             // button_SK_overrent
             // 
             this.button_SK_overrent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_SK_overrent.ForeColor = System.Drawing.Color.Red;
             this.button_SK_overrent.Location = new System.Drawing.Point(357, 3);
             this.button_SK_overrent.Name = "button_SK_overrent";
             this.button_SK_overrent.Size = new System.Drawing.Size(83, 60);
             this.button_SK_overrent.TabIndex = 1;
             this.button_SK_overrent.Text = "overrent";
             this.button_SK_overrent.UseVisualStyleBackColor = true;
+            this.button_SK_overrent.Click += new System.EventHandler(this.button_SK_overrent_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -341,6 +343,7 @@
             this.button_SK_rent.TabIndex = 1;
             this.button_SK_rent.Text = "auszahl";
             this.button_SK_rent.UseVisualStyleBackColor = true;
+            this.button_SK_rent.Click += new System.EventHandler(this.button_SK_rent_Click);
             // 
             // TXTLABELSCHI
             // 
