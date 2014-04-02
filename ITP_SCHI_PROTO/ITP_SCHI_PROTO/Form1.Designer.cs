@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.button_SB_rent = new System.Windows.Forms.Button();
@@ -65,7 +58,6 @@
             this.button_SK_Scan = new System.Windows.Forms.Button();
             this.button_SK_modi = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -83,7 +75,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.01393F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.90251F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel9, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 3, 0);
@@ -105,98 +96,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1795, 729);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel9, 2);
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.radioButton3, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.radioButton4, 1, 1);
-            this.tableLayoutPanel9.Controls.Add(this.textBox2, 0, 2);
-            this.tableLayoutPanel9.Controls.Add(this.button1, 1, 2);
-            this.tableLayoutPanel9.Controls.Add(this.button2, 0, 3);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(901, 150);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 4;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.68807F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.31193F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 134F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(890, 428);
-            this.tableLayoutPanel9.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.tableLayoutPanel9.SetColumnSpan(this.label8, 2);
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(4, 1);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(882, 40);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Snowbord";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton3.Location = new System.Drawing.Point(4, 45);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(437, 110);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "zurückgeben";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton4.Location = new System.Drawing.Point(448, 45);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(438, 110);
-            this.radioButton4.TabIndex = 2;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "ausborgen";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(4, 162);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(437, 126);
-            this.textBox2.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(448, 162);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(438, 126);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Scan";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.tableLayoutPanel9.SetColumnSpan(this.button2, 2);
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(4, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(882, 129);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Change";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel7
             // 
@@ -233,6 +132,7 @@
             this.button_SB_rent.TabIndex = 1;
             this.button_SB_rent.Text = "auszahl";
             this.button_SB_rent.UseVisualStyleBackColor = true;
+            this.button_SB_rent.Click += new System.EventHandler(this.button_SB_rent_Click);
             // 
             // tableLayoutPanel6
             // 
@@ -263,12 +163,14 @@
             // button_SB_overrent
             // 
             this.button_SB_overrent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_SB_overrent.ForeColor = System.Drawing.Color.Red;
             this.button_SB_overrent.Location = new System.Drawing.Point(357, 3);
             this.button_SB_overrent.Name = "button_SB_overrent";
             this.button_SB_overrent.Size = new System.Drawing.Size(83, 60);
             this.button_SB_overrent.TabIndex = 1;
             this.button_SB_overrent.Text = "overrent";
             this.button_SB_overrent.UseVisualStyleBackColor = true;
+            this.button_SB_overrent.Click += new System.EventHandler(this.button_SB_overrent_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -439,6 +341,7 @@
             this.button_SB_anz.TabIndex = 1;
             this.button_SB_anz.Text = "geszahl";
             this.button_SB_anz.UseVisualStyleBackColor = true;
+            this.button_SB_anz.Click += new System.EventHandler(this.button_SB_anz_Click);
             // 
             // tbox_LOG_bottom
             // 
@@ -457,7 +360,7 @@
             // 
             this.tableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel8.ColumnCount = 2;
-            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel8, 2);
+            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel8, 4);
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Controls.Add(this.label7, 0, 0);
@@ -474,7 +377,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.31193F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 134F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(890, 428);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1787, 428);
             this.tableLayoutPanel8.TabIndex = 7;
             // 
             // label7
@@ -484,7 +387,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Location = new System.Drawing.Point(4, 1);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(882, 40);
+            this.label7.Size = new System.Drawing.Size(1779, 40);
             this.label7.TabIndex = 0;
             this.label7.Text = "Schi";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -496,10 +399,11 @@
             this.radioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radioButton1.Location = new System.Drawing.Point(4, 45);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(437, 110);
+            this.radioButton1.Size = new System.Drawing.Size(886, 110);
             this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "zurückgeben";
+            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -507,12 +411,13 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton2.Location = new System.Drawing.Point(448, 45);
+            this.radioButton2.Location = new System.Drawing.Point(897, 45);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(438, 110);
+            this.radioButton2.Size = new System.Drawing.Size(886, 110);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "ausborgen";
+            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // textBox1
@@ -521,15 +426,15 @@
             this.textBox1.Location = new System.Drawing.Point(4, 162);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(437, 126);
+            this.textBox1.Size = new System.Drawing.Size(886, 126);
             this.textBox1.TabIndex = 3;
             // 
             // button_SK_Scan
             // 
             this.button_SK_Scan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_SK_Scan.Location = new System.Drawing.Point(448, 162);
+            this.button_SK_Scan.Location = new System.Drawing.Point(897, 162);
             this.button_SK_Scan.Name = "button_SK_Scan";
-            this.button_SK_Scan.Size = new System.Drawing.Size(438, 126);
+            this.button_SK_Scan.Size = new System.Drawing.Size(886, 126);
             this.button_SK_Scan.TabIndex = 4;
             this.button_SK_Scan.Text = "Scan";
             this.button_SK_Scan.UseVisualStyleBackColor = true;
@@ -540,10 +445,11 @@
             this.button_SK_modi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_SK_modi.Location = new System.Drawing.Point(4, 295);
             this.button_SK_modi.Name = "button_SK_modi";
-            this.button_SK_modi.Size = new System.Drawing.Size(882, 129);
+            this.button_SK_modi.Size = new System.Drawing.Size(1779, 129);
             this.button_SK_modi.TabIndex = 5;
             this.button_SK_modi.Text = "Change";
             this.button_SK_modi.UseVisualStyleBackColor = true;
+            this.button_SK_modi.Click += new System.EventHandler(this.button_SK_modi_Click);
             // 
             // Form1
             // 
@@ -551,6 +457,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1795, 729);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -558,8 +465,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -609,13 +514,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_SK_Scan;
         private System.Windows.Forms.Button button_SK_modi;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }
 
