@@ -14,6 +14,7 @@ namespace ITPPROTO
     public partial class Form1 : Form
     {
         public int kunden_id=-1;
+        private int op = -1;
         private string myConnectionString = "SERVER=localhost;" +
                             "DATABASE=itp_proto;" +
                             "UID=root;" +
@@ -233,7 +234,39 @@ namespace ITPPROTO
                 tbox_LOG_bottom.Text = tbox_LOG_bottom.Text + row + "\r\n";
             }
         }
-        private void mysql_edit() { }//Auslesen der Änderungen und Übernehmen
+        private void mysql_edit()
+        {
+            MySqlConnection connection = new MySqlConnection(myConnectionString);
+            MySqlCommand command = connection.CreateCommand();
+            int kid = 0;
+            int aid = 0;
+            if (this.kunden_id != -1)
+            {
+                kid = this.kunden_id;
+                aid = int.Parse( textBox1.Text);
+            }
+            command.CommandText = "Update  marke, count(*) FROM artikel Where istSKI is false group by marke";
+            MySqlDataReader Reader;
+            connection.Open();
+            Reader = command.ExecuteReader();
+            while (Reader.Read())
+            {
+                string row = "";
+                for (int i = 0; i < Reader.FieldCount; i++)
+                    if (i == Reader.FieldCount - 1)
+                    {
+                        row += Reader.GetValue(i).ToString();
+                    }
+                    else
+                    {
+                        row += Reader.GetValue(i).ToString() + ", ";
+                    }
+                //Console.WriteLine(row);
+                tbox_LOG_bottom.Text = tbox_LOG_bottom.Text + row + "\r\n";
+            }
+        }
+            
+            //Auslesen der Änderungen und Übernehmen
 
         private void button_SK_modi_Click(object sender, EventArgs e)
         {
@@ -248,6 +281,22 @@ namespace ITPPROTO
             this.kunden_id = -1;
 
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                this.op = 1;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                this.op = 2;
+            }
         }
 
 
