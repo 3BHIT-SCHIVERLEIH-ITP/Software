@@ -240,12 +240,23 @@ namespace ITPPROTO
             MySqlCommand command = connection.CreateCommand();
             int kid = 0;
             int aid = 0;
+            string g="";
+            Boolean gete = false;
             if (this.kunden_id != -1)
             {
                 kid = this.kunden_id;
-                aid = int.Parse( textBox1.Text);
+                aid = int.Parse( textBox1.Text);                
+                if (op == 1)
+                {
+                    g = "Insert into abrechnung VALUES ((select max(id) from abrechnung),'2014-04-21',"+kid+","+aid+",false);";
+                }else{
+                    if(op == 2)
+                    {
+                        g= "Update abrechnung SET zurueckgegeben = true Where aid = "+aid+" AND kid = "+kid+";";
+                    }
+
             }
-            command.CommandText = "Update  marke, count(*) FROM artikel Where istSKI is false group by marke";
+            command.CommandText = g;
             MySqlDataReader Reader;
             connection.Open();
             Reader = command.ExecuteReader();
@@ -279,8 +290,6 @@ namespace ITPPROTO
             }
             mysql_edit();
             this.kunden_id = -1;
-
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
