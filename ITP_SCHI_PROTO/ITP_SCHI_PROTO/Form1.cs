@@ -240,45 +240,47 @@ namespace ITPPROTO
             MySqlCommand command = connection.CreateCommand();
             int kid = 0;
             int aid = 0;
-            string g="";
+            string g = "";
             Boolean gete = false;
             if (this.kunden_id != -1)
             {
                 kid = this.kunden_id;
-                aid = int.Parse( textBox1.Text);                
+                aid = int.Parse(textBox1.Text);
                 if (op == 1)
                 {
-                    g = "Insert into abrechnung VALUES ((select max(id) from abrechnung),'2014-04-21',"+kid+","+aid+",false);";
-                }else{
-                    if(op == 2)
+                    g = "Insert into abrechnung VALUES ((select max(id) from abrechnung),'2014-04-21'," + kid + "," + aid + ",false);";
+                }
+                else
+                {
+                    if (op == 2)
                     {
-                        g= "Update abrechnung SET zurueckgegeben = true Where aid = "+aid+" AND kid = "+kid+";";
+                        g = "Update abrechnung SET zurueckgegeben = true Where aid = " + aid + " AND kid = " + kid + ";";
                     }
 
+                }
+                command.CommandText = g;
+                MySqlDataReader Reader;
+                connection.Open();
+                Reader = command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    string row = "";
+                    for (int i = 0; i < Reader.FieldCount; i++)
+                        if (i == Reader.FieldCount - 1)
+                        {
+                            row += Reader.GetValue(i).ToString();
+                        }
+                        else
+                        {
+                            row += Reader.GetValue(i).ToString() + ", ";
+                        }
+                    //Console.WriteLine(row);
+                    tbox_LOG_bottom.Text = tbox_LOG_bottom.Text + row + "\r\n";
+                }
             }
-            command.CommandText = g;
-            MySqlDataReader Reader;
-            connection.Open();
-            Reader = command.ExecuteReader();
-            while (Reader.Read())
-            {
-                string row = "";
-                for (int i = 0; i < Reader.FieldCount; i++)
-                    if (i == Reader.FieldCount - 1)
-                    {
-                        row += Reader.GetValue(i).ToString();
-                    }
-                    else
-                    {
-                        row += Reader.GetValue(i).ToString() + ", ";
-                    }
-                //Console.WriteLine(row);
-                tbox_LOG_bottom.Text = tbox_LOG_bottom.Text + row + "\r\n";
-            }
-        }
-            
+
             //Auslesen der Änderungen und Übernehmen
-
+        }
         private void button_SK_modi_Click(object sender, EventArgs e)
         {
             KundenBearbeitung kb = new KundenBearbeitung();
