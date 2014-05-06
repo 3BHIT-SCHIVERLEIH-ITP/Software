@@ -15,6 +15,7 @@ namespace ITPPROTO
     {
         public int kunden_id=-1;
         private int op = -1;
+        public DateTime datum;
         private string myConnectionString = "SERVER=localhost;" +
                             "DATABASE=itp_proto;" +
                             "UID=itp;" +
@@ -286,14 +287,51 @@ namespace ITPPROTO
             KundenBearbeitung kb = new KundenBearbeitung();
             kb.TheParent = this;
             kb.Show();
-            while (this.kunden_id == -1)
-            {
 
-            }
-            mysql_edit();
-            this.kunden_id = -1;
         }
-
+         private void kchosen(){
+                if (!(radioButton1.Checked == false && radioButton2.Checked == false))
+                {
+                    if (radioButton1.Checked == true)
+                    {
+                        mysql_edit(true);//Zurueckgeben
+                    }
+                    else
+                    {
+                        mysql_edit(false);//Ausborgen
+                    }
+                    this.kunden_id = -1;
+                }
+            }
+        private void mysql_edit(bool b)
+        {
+            if (b)
+            {
+                String s = "UPADTE abrechnung SET zurueckgegeben=true where kid like " + this.kunden_id + " and aid like " + textBox1.ToString() + ";";
+                mslq(s);
+            }
+            if (!b)
+            {
+                kalender kb = new kalender();
+                kb.TheParent = this;
+                kb.Show();
+                String s = "Insert into abrechnung Values ((select (max(id)+1)),) ";
+                mslq(s);
+            }
+        }
+        private Object mslq(String s)
+        {
+            MySqlConnection connection = new MySqlConnection(myConnectionString);
+            MySqlCommand command = connection.CreateCommand();
+            MySqlDataReader Reader;
+            command.CommandText = s;
+            connection.Open();
+            Reader = command.ExecuteReader();
+            Reader.Read();
+            s = Reader.GetValue(0).ToString();
+            connection.Close();
+            return s;
+        }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -308,6 +346,11 @@ namespace ITPPROTO
             {
                 this.op = 2;
             }
+        }
+
+        private void button_SK_Scan_Click(object sender, EventArgs e)
+        {
+
         }
 
 

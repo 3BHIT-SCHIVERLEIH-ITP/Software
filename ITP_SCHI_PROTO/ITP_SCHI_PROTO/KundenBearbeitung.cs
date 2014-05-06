@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace ITPPROTO
 {
     public partial class KundenBearbeitung : Form
@@ -16,8 +16,29 @@ namespace ITPPROTO
         public KundenBearbeitung()
         {
             InitializeComponent();
+            loadUP();
         }
-
+        private void loadUP()
+        {
+            MySqlDataReader r = (MySqlDataReader)mslq("select vorname, nachname, adresse from kunde;");
+            String[] w = new String[r.FieldCount]
+        }
+        private Object mslq(String s)
+        {
+            MySqlConnection connection = new MySqlConnection("SERVER=localhost;" +
+                            "DATABASE=itp_proto;" +
+                            "UID=itp;" +
+                            "PASSWORD=rent;");
+            MySqlCommand command = connection.CreateCommand();
+            MySqlDataReader Reader;
+            command.CommandText = s;
+            connection.Open();
+            Reader = command.ExecuteReader();
+            Reader.Read();
+            s = Reader.GetValue(0).ToString();
+            connection.Close();
+            return Reader;
+        }
         private void checkedListBox_Kundenview_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = checkedListBox_Kundenview.SelectedIndex;
@@ -28,8 +49,8 @@ namespace ITPPROTO
         {
             TheParent.kunden_id = aktualuser;
             this.Visible = false;
-            this.Dispose();
 
+            this.Dispose();
         }
 
         public Form1 TheParent { get; set; }

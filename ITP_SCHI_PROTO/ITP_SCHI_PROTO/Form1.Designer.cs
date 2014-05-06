@@ -126,6 +126,7 @@
             // button_SB_rent
             // 
             this.button_SB_rent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_SB_rent.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_SB_rent.Location = new System.Drawing.Point(355, 3);
             this.button_SB_rent.Name = "button_SB_rent";
             this.button_SB_rent.Size = new System.Drawing.Size(82, 60);
@@ -239,6 +240,7 @@
             // button_SK_rent
             // 
             this.button_SK_rent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_SK_rent.ForeColor = System.Drawing.Color.ForestGreen;
             this.button_SK_rent.Location = new System.Drawing.Point(355, 3);
             this.button_SK_rent.Name = "button_SK_rent";
             this.button_SK_rent.Size = new System.Drawing.Size(82, 60);
@@ -440,6 +442,7 @@
             this.button_SK_Scan.TabIndex = 4;
             this.button_SK_Scan.Text = "Scan";
             this.button_SK_Scan.UseVisualStyleBackColor = true;
+            this.button_SK_Scan.Click += new System.EventHandler(this.button_SK_Scan_Click);
             // 
             // button_SK_modi
             // 
