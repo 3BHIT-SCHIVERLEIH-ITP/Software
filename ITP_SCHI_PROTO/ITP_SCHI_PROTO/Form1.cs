@@ -30,50 +30,50 @@ namespace ITPPROTO
             MySqlConnection connection = new MySqlConnection(myConnectionString);
             MySqlCommand command = connection.CreateCommand();
             MySqlDataReader Reader;
-            command.CommandText = "SELECT count(id) FROM artikel Where istSKI is true";
+            command.CommandText = "SELECT count(*) FROM artikel Where istSKI = true;";
             connection.Open();
             Reader = command.ExecuteReader();
             Reader.Read();
             button_SK_anz.Text = Reader.GetValue(0).ToString();
-
+            connection.Close();
             //ausgeborgt
-            /*
+            
             command.CommandText = "SELECT count(*) FROM abrechnung join artikel on aid = artikel.id Where artikel.istSKI = true AND ausgeborgtbis > current_date() AND zurueckgegeben = false;";
-
+            connection.Open();
             Reader = command.ExecuteReader();
             Reader.Read();
             button_SK_rent.Text = Reader.GetValue(0).ToString();
-            
+            connection.Close();
             //overrent
             command.CommandText = "SELECT count(*) FROM abrechnung join artikel on aid = artikel.id Where artikel.istSKI = true AND ausgeborgtbis < current_date() AND zurueckgegeben = false;";
-
+            connection.Open();
             Reader = command.ExecuteReader();
             Reader.Read();
             button_SK_overrent.Text = Reader.GetValue(0).ToString();
-
+            connection.Close();
             //ski ende
 
             //snowboard
             command.CommandText = "SELECT count(*) FROM artikel Where istSKI is false";
-
+            connection.Open();
             Reader = command.ExecuteReader();
             Reader.Read();
-            button_SK_anz.Text = Reader.GetValue(0).ToString();
-
+            button_SB_anz.Text = Reader.GetValue(0).ToString();
+            connection.Close();
             //ausgeborgt
             command.CommandText = "SELECT count(*) FROM abrechnung join artikel on aid = artikel.id Where artikel.istSKI = false AND ausgeborgtbis > current_date() AND zurueckgegeben = false;";
-
+            connection.Open();
             Reader = command.ExecuteReader();
             Reader.Read();
             button_SB_rent.Text = Reader.GetValue(0).ToString();
-
+            connection.Close();
             //overrent
             command.CommandText = "SELECT count(*) FROM abrechnung join artikel on aid = artikel.id Where artikel.istSKI = false AND ausgeborgtbis < current_date() AND zurueckgegeben = false;";
-
+            connection.Open();
             Reader = command.ExecuteReader();
             Reader.Read();
             button_SB_overrent.Text = Reader.GetValue(0).ToString();
-             */
+            
             connection.Close();
 
 
@@ -241,7 +241,7 @@ namespace ITPPROTO
             int kid = 0;
             int aid = 0;
             string g = "";
-            Boolean gete = false;
+            //Boolean gete = false;
             if (this.kunden_id != -1)
             {
                 kid = this.kunden_id;
