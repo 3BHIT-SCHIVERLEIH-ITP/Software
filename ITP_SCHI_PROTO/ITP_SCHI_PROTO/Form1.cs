@@ -17,8 +17,8 @@ namespace ITPPROTO
         private int op = -1;
         private string myConnectionString = "SERVER=localhost;" +
                             "DATABASE=itp_proto;" +
-                            "UID=root;" +
-                            "PASSWORD=toor;";
+                            "UID=itp;" +
+                            "PASSWORD=rent;";
         public Form1()
         {
             InitializeComponent();
