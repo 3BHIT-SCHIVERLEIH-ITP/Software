@@ -26,11 +26,14 @@ namespace ITPPROTO
             loadUP();
         }
         private void loadUP()
-        {   
+        {
             //ski anzahl button text
+            #region normaler SQL text
             MySqlConnection connection = new MySqlConnection(myConnectionString);
             MySqlCommand command = connection.CreateCommand();
             MySqlDataReader Reader;
+            #endregion
+            #region button beschriftung
             command.CommandText = "SELECT count(*) FROM artikel Where istSKI = true;";
             connection.Open();
             Reader = command.ExecuteReader();
@@ -74,7 +77,7 @@ namespace ITPPROTO
             Reader = command.ExecuteReader();
             Reader.Read();
             button_SB_overrent.Text = Reader.GetValue(0).ToString();
-            
+            #endregion
             connection.Close();
 
 
@@ -84,7 +87,7 @@ namespace ITPPROTO
         {
             
         }
-
+        #region 6 buttons up click
         private void button_SK_anz_Click(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(myConnectionString);
@@ -235,6 +238,8 @@ namespace ITPPROTO
                 tbox_LOG_bottom.Text = tbox_LOG_bottom.Text + row + "\r\n";
             }
         }
+        #endregion
+
         private void mysql_edit()
         {
             MySqlConnection connection = new MySqlConnection(myConnectionString);
@@ -284,9 +289,6 @@ namespace ITPPROTO
         }
         private void button_SK_modi_Click(object sender, EventArgs e)
         {
-            KundenBearbeitung kb = new KundenBearbeitung();
-            kb.TheParent = this;
-            kb.Show();
 
         }
          private void kchosen(){
@@ -315,7 +317,7 @@ namespace ITPPROTO
                 kalender kb = new kalender();
                 kb.TheParent = this;
                 kb.Show();
-                String s = "Insert into abrechnung Values ((select (max(id)+1)),) ";
+                String s ="Insert into abrechnung VALUES ((select (max(id)+1) from abrechnung),'2014-04-21'," + kid + "," + aid + ",false);";
                 mslq(s);
             }
         }
@@ -332,6 +334,7 @@ namespace ITPPROTO
             connection.Close();
             return s;
         }
+        #region radiobuttons
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -347,10 +350,17 @@ namespace ITPPROTO
                 this.op = 2;
             }
         }
-
+        #endregion
         private void button_SK_Scan_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KundenBearbeitung kb = new KundenBearbeitung();
+            kb.TheParent = this;
+            kb.Show();
         }
 
 
