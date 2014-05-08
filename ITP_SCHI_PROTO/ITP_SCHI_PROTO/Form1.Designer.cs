@@ -404,7 +404,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(1779, 40);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Schi";
+            this.label7.Text = "bearbeiten";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radioButton1

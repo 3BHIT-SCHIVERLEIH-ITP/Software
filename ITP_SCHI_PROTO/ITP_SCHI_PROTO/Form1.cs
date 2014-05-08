@@ -284,12 +284,20 @@ namespace ITPPROTO
                     {
                         //g = "Insert into abrechnung VALUES (" + id + ",'" + convert_date(this.datum) + "'," + kid + "," + aid + ",false);";
 
-                       
+                        command.CommandText = "Select max(id) from abrechnung;";
+                        connection.Open();
+                        Reader = command.ExecuteReader();
+                        Reader.Read();
+                        int id=201;
+                        id =  Int32.Parse( Reader.GetValue(0).ToString());
+                        id++;
+                        connection.Close();
+                        command = new MySqlCommand();
                         command.CommandText = "INSERT INTO abrechnung VALUES(?id,?date,?kid,?aid,false)";
-                        command.Parameters.Add("?id", MySqlDbType.Int16).Value = 100;
+                        command.Parameters.Add("?id", MySqlDbType.Int32).Value = id;
                         command.Parameters.Add("?date", MySqlDbType.Date).Value = convert_date(datum);
-                        command.Parameters.Add("?kid", MySqlDbType.Int16).Value = kid;
-                        command.Parameters.Add("?aid", MySqlDbType.Int16).Value = aid;
+                        command.Parameters.Add("?kid", MySqlDbType.Int32).Value = kid;
+                        command.Parameters.Add("?aid", MySqlDbType.Int32).Value = aid;
                         command.Connection = connection;
                         command.Connection.Open();
                         command.ExecuteNonQuery();
@@ -300,7 +308,7 @@ namespace ITPPROTO
                 }
                 
             }
-
+            loadUP();
             //Auslesen der Änderungen und Übernehmen
         }
         private String convert_date(DateTime dt)
