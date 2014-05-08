@@ -254,13 +254,13 @@ namespace ITPPROTO
                 aid = int.Parse(textBox1.Text);
                 if (op == 1)
                 {
-                    g = "Insert into abrechnung VALUES ((select max(id) from abrechnung),'2014-04-21'," + kid + "," + aid + ",false);";
+                    g = "Insert into abrechnung VALUES ((select (max(id)+1) from abrechnung),'"+convert_date(this.datum)+"'," + kid + "," + aid + ",false);";
                 }
                 else
                 {
                     if (op == 2)
                     {
-                        g = "Update abrechnung SET zurueckgegeben = true Where aid = " + aid + " AND kid = " + kid + ";";
+                        g = "Update abrechnung SET zurueckgegeben=true Where aid like " + aid + " AND kid like " + kid + ";";
                     }
 
                 }
@@ -287,11 +287,30 @@ namespace ITPPROTO
 
             //Auslesen der Änderungen und Übernehmen
         }
+        private String convert_date(DateTime dt)
+        {
+            String datume = "";
+            datume += dt.Year;
+            if (dt.Month.ToString().Length < 2)
+                datume += "-0" + dt.Month;
+            else
+                datume += "-" + dt.Month;
+            datume += "-" + dt.Day;
+            return datume;
+        }
         private void button_SK_modi_Click(object sender, EventArgs e)
         {
-
+            if (op == 2)
+            {
+                tbox_LOG_bottom.Text = "Rent till: " + convert_date(datum) + ", Kundenid: " + kunden_id + ", Artikelid: " + textBox1.Text;
+                mysql_edit();
+            }
+            else
+            {
+                tbox_LOG_bottom.Text = "Kundenid: " + kunden_id + ", Artikelid: " + textBox1.Text;
+            }
         }
-         private void kchosen(){
+        private void kchosen(){
                 if (!(radioButton1.Checked == false && radioButton2.Checked == false))
                 {
                     if (radioButton1.Checked == true)
@@ -317,7 +336,7 @@ namespace ITPPROTO
                 kalender kb = new kalender();
                 kb.TheParent = this;
                 kb.Show();
-                String s ="Insert into abrechnung VALUES ((select (max(id)+1) from abrechnung),'2014-04-21'," + kid + "," + aid + ",false);";
+                String s = "Insert into abrechnung VALUES ((select (max(id)+1) from abrechnung),'2014-04-21'," + this.kunden_id + "," + textBox1.ToString() + ",false);";
                 mslq(s);
             }
         }
@@ -361,6 +380,11 @@ namespace ITPPROTO
             KundenBearbeitung kb = new KundenBearbeitung();
             kb.TheParent = this;
             kb.Show();
+        }
+
+        private void Form1_Loadup(object sender, EventArgs e)
+        {
+            this.loadUP();
         }
 
 

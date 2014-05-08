@@ -480,6 +480,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verleih";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.MouseHover += new System.EventHandler(this.Form1_Loadup);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);

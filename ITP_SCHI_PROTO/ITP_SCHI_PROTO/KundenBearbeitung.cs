@@ -73,15 +73,19 @@ namespace ITPPROTO
         private void checkedListBox_Kundenview_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = checkedListBox_Kundenview.SelectedIndex;
-            aktualuser = i;            
+            aktualuser = i+1;            
         }
 
         private void button_ok_Click(object sender, EventArgs e)
         {
             TheParent.kunden_id = aktualuser;
-            this.Visible = false;
-            this.finish = true;
-            this.Dispose();
+            kalender kal = new kalender();
+            kal.TheMother = this;
+            kal.Visible = true;
+            this.Dispose(true);
+            //this.Visible = false;
+            //this.finish = true;
+            //this.Dispose();
         }
 
         public Form1 TheParent { get; set; }

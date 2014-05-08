@@ -15,17 +15,28 @@ namespace ITPPROTO
         public kalender()
         {
             InitializeComponent();
+            monthCalendar1.MaxSelectionCount = 1;
         }
 
         private void Ok_Click(object sender, EventArgs e)
         {
-            this.Dispose(true);
+            try
+            {
+                TheMother.TheParent.datum = monthCalendar1.SelectionStart;
+            }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine(""+ex.ToString());
+                this.Text = "tt";
+            }
+                this.Dispose(true);
         }
         public Form1 TheParent { get; set; }
+        public KundenBearbeitung TheMother { get; set; }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            TheParent.datum = monthCalendar1.SelectionStart;
+            //TheParent.datum = monthCalendar1.SelectionStart;
         }
     }
 }
