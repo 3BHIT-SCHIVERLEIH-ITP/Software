@@ -89,5 +89,10 @@ namespace ITPPROTO
         }
 
         public Form1 TheParent { get; set; }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

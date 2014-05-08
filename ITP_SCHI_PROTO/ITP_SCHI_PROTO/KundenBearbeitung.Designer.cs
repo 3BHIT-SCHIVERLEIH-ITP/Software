@@ -70,8 +70,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(566, 168);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Neuer Kunden";
+            this.button1.Text = "Neuer Kunde";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_ok
             // 
