@@ -244,6 +244,8 @@ namespace ITPPROTO
         {
             MySqlConnection connection = new MySqlConnection(myConnectionString);
             MySqlCommand command = connection.CreateCommand();
+            MySqlDataReader Reader;
+            command.CommandText = "Select max(id) from abrechnung;";
             int kid = 0;
             int aid = 0;
             string g = "";
@@ -254,35 +256,49 @@ namespace ITPPROTO
                 aid = int.Parse(textBox1.Text);
                 if (op == 1)
                 {
-                    g = "Insert into abrechnung VALUES ((select (max(id)+1) from abrechnung),'"+convert_date(this.datum)+"'," + kid + "," + aid + ",false);";
+                    command.CommandText = "Select max(?id) from abrechnung;";
+                    command.Parameters.Add("?id", MySqlDbType.VarChar).Value = "id";
+                    connection.Open();
+                    Reader = command.ExecuteReader();
+                    int id=0;
+                    while (Reader.Read())
+                    {
+                        id = int.Parse(Reader.GetValue(0).ToString());
+                        id++;
+                    }
+                    command.Connection.Close();
+                    command.CommandText = "Update abrechnung set zurueckgegeben=true where kid like ?kid and aid like ?aid";
+                    command.Parameters.Add("?id", MySqlDbType.Int16).Value = id;
+                    command.Parameters.Add("?date", MySqlDbType.Date).Value = convert_date(datum);
+                    command.Parameters.Add("?kid", MySqlDbType.Int16).Value = kid;
+                    command.Parameters.Add("?aid", MySqlDbType.Int16).Value = aid;
+                    command.Connection = connection;
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
+                    command.Connection.Close();
+                    
                 }
                 else
                 {
                     if (op == 2)
                     {
-                        g = "Update abrechnung SET zurueckgegeben=true Where aid like " + aid + " AND kid like " + kid + ";";
+                        //g = "Insert into abrechnung VALUES (" + id + ",'" + convert_date(this.datum) + "'," + kid + "," + aid + ",false);";
+
+                       
+                        command.CommandText = "INSERT INTO abrechnung VALUES(?id,?date,?kid,?aid,false)";
+                        command.Parameters.Add("?id", MySqlDbType.Int16).Value = 100;
+                        command.Parameters.Add("?date", MySqlDbType.Date).Value = convert_date(datum);
+                        command.Parameters.Add("?kid", MySqlDbType.Int16).Value = kid;
+                        command.Parameters.Add("?aid", MySqlDbType.Int16).Value = aid;
+                        command.Connection = connection;
+                        command.Connection.Open();
+                        command.ExecuteNonQuery();
+                        command.Connection.Close();
+
                     }
 
                 }
-                command.CommandText = g;
-                MySqlDataReader Reader;
-                connection.Open();
-                Reader = command.ExecuteReader();
-                while (Reader.Read())
-                {
-                    string row = "";
-                    for (int i = 0; i < Reader.FieldCount; i++)
-                        if (i == Reader.FieldCount - 1)
-                        {
-                            row += Reader.GetValue(i).ToString();
-                        }
-                        else
-                        {
-                            row += Reader.GetValue(i).ToString() + ", ";
-                        }
-                    //Console.WriteLine(row);
-                    tbox_LOG_bottom.Text = tbox_LOG_bottom.Text + row + "\r\n";
-                }
+                
             }
 
             //Auslesen der Änderungen und Übernehmen
