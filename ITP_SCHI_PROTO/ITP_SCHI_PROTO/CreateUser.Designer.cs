@@ -79,6 +79,7 @@
             // 
             this.ctbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctbox.Location = new System.Drawing.Point(271, 154);
+            this.ctbox.MaxLength = 3;
             this.ctbox.Name = "ctbox";
             this.ctbox.PasswordChar = '*';
             this.ctbox.Size = new System.Drawing.Size(263, 22);

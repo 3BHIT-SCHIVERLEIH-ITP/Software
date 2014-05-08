@@ -23,7 +23,9 @@ namespace ITPPROTO
         }
 
         private void loadUP()
-        {
+        {   
+
+
             MySqlConnection connection = new MySqlConnection("SERVER=localhost;" +
                            "DATABASE=itp_proto;" +
                            "UID=itp;" +
@@ -94,7 +96,17 @@ namespace ITPPROTO
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CreateUser cu = new CreateUser();
+            cu.TheBrother = this;
+            cu.Visible = true;
 
+        }
+
+        private void checkedListBox_Kundenview_MouseEnter(object sender, EventArgs e)
+        {
+            for (int i= checkedListBox_Kundenview.Items.Count-1; i >=0; i-- )
+                this.checkedListBox_Kundenview.Items.RemoveAt(i);
+            loadUP();
         }
     }
 }

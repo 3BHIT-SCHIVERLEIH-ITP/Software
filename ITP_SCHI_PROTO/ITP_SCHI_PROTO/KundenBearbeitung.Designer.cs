@@ -45,6 +45,7 @@
             this.checkedListBox_Kundenview.Size = new System.Drawing.Size(1138, 428);
             this.checkedListBox_Kundenview.TabIndex = 0;
             this.checkedListBox_Kundenview.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_Kundenview_SelectedIndexChanged);
+            this.checkedListBox_Kundenview.MouseEnter += new System.EventHandler(this.checkedListBox_Kundenview_MouseEnter);
             // 
             // tableLayoutPanel1
             // 

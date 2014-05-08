@@ -19,26 +19,26 @@ namespace ITPPROTO
         }
         public void db_newUser()
         {
-            MySqlCommand command = new MySqlCommand();
+            
             MySqlConnection connect = new MySqlConnection(myConnectionString);
+            MySqlCommand command = connect.CreateCommand();
             command.CommandText = "Select max(?id) from abrechnung;";
             command.Parameters.Add("?id", MySqlDbType.VarChar).Value = "id";
+            MySqlDataReader Reader;
+
+            command.CommandText = "Select max(id) from kunde;";
             connect.Open();
-            MySqlDataReader Reader = command.ExecuteReader();
-            int id = 0;
-            while (Reader.Read())
-            {
-                id = int.Parse(Reader.GetValue(0).ToString());
-                id++;
-            }
+            Reader = command.ExecuteReader();
+            Reader.Read();
+            int id = 201;
+            id = Int32.Parse(Reader.GetValue(0).ToString());
+            id++;
+            connect.Close();
+
+
             command.Connection.Close();
-            command.CommandText = "Insert into kunde Values(?id,'?vname','?nname','?adr','?debit','?code')";
-            command.Parameters.Add("?id", MySqlDbType.Int16).Value = id;
-            command.Parameters.Add("?vname", MySqlDbType.VarChar).Value = vtbox.Text;
-            command.Parameters.Add("?nname", MySqlDbType.VarChar).Value = ntbox.Text;
-            command.Parameters.Add("?adr", MySqlDbType.VarChar).Value = atbox.Text;
-            command.Parameters.Add("?debit", MySqlDbType.VarChar).Value = ktbox.Text;
-            command.Parameters.Add("?code", MySqlDbType.VarChar).Value = ctbox.Text;
+            command = new MySqlCommand();
+            command.CommandText = "Insert into kunde Values("+id+",'"+vtbox.Text+"','"+ntbox.Text+"','"+atbox.Text+"','"+ktbox.Text+"','" + ctbox.Text +"')";
             command.Connection = connect;
             command.Connection.Open();
             command.ExecuteNonQuery();
@@ -53,7 +53,9 @@ namespace ITPPROTO
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            db_newUser();
+            this.Dispose();
+            this.Visible = false;
         }
 
     }
