@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ctbox = new System.Windows.Forms.TextBox();
+            this.ktbox = new System.Windows.Forms.TextBox();
+            this.atbox = new System.Windows.Forms.TextBox();
+            this.ntbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.vtbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,17 +49,17 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ctbox, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.ktbox, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.atbox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.ntbox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.vtbox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -75,16 +75,38 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(537, 261);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // ctbox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Vorname";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ctbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctbox.Location = new System.Drawing.Point(271, 154);
+            this.ctbox.Name = "ctbox";
+            this.ctbox.PasswordChar = '*';
+            this.ctbox.Size = new System.Drawing.Size(263, 22);
+            this.ctbox.TabIndex = 10;
+            // 
+            // ktbox
+            // 
+            this.ktbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ktbox.Location = new System.Drawing.Point(271, 125);
+            this.ktbox.Name = "ktbox";
+            this.ktbox.Size = new System.Drawing.Size(263, 22);
+            this.ktbox.TabIndex = 9;
+            // 
+            // atbox
+            // 
+            this.atbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.atbox.Location = new System.Drawing.Point(271, 96);
+            this.atbox.Name = "atbox";
+            this.atbox.Size = new System.Drawing.Size(263, 22);
+            this.atbox.TabIndex = 8;
+            // 
+            // ntbox
+            // 
+            this.ntbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ntbox.Location = new System.Drawing.Point(271, 67);
+            this.ntbox.Name = "ntbox";
+            this.ntbox.Size = new System.Drawing.Size(263, 22);
+            this.ntbox.TabIndex = 7;
             // 
             // label2
             // 
@@ -98,6 +120,17 @@
             this.label2.Text = "Neuer Kunde";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(262, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Vorname";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -143,45 +176,13 @@
             this.label6.Text = "Code";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // vtbox
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(271, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 22);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(271, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 22);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(271, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 22);
-            this.textBox3.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(271, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(263, 22);
-            this.textBox4.TabIndex = 9;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Location = new System.Drawing.Point(271, 154);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(263, 22);
-            this.textBox5.TabIndex = 10;
+            this.vtbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vtbox.Location = new System.Drawing.Point(271, 38);
+            this.vtbox.Name = "vtbox";
+            this.vtbox.Size = new System.Drawing.Size(263, 22);
+            this.vtbox.TabIndex = 6;
             // 
             // button1
             // 
@@ -218,11 +219,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ctbox;
+        private System.Windows.Forms.TextBox ktbox;
+        private System.Windows.Forms.TextBox atbox;
+        private System.Windows.Forms.TextBox ntbox;
+        private System.Windows.Forms.TextBox vtbox;
         private System.Windows.Forms.Button button1;
     }
 }

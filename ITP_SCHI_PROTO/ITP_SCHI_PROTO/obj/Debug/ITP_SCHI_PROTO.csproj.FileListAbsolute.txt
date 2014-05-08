@@ -9,3 +9,4 @@ F:\Githubreps\ITP_SCHIVERLEIH\ITP_SCHI_PROTO\ITP_SCHI_PROTO\obj\Debug\ITP_SCHI_P
 F:\Githubreps\ITP_SCHIVERLEIH\ITP_SCHI_PROTO\ITP_SCHI_PROTO\obj\Debug\ITPPROTO.KundenBearbeitung.resources
 F:\Githubreps\ITP_SCHIVERLEIH\ITP_SCHI_PROTO\ITP_SCHI_PROTO\obj\Debug\ITPPROTO.kalender.resources
 F:\Githubreps\ITP_SCHIVERLEIH\ITP_SCHI_PROTO\ITP_SCHI_PROTO\obj\Debug\ITP_SCHI_PROTO.csprojResolveAssemblyReference.cache
+F:\Githubreps\ITP_SCHIVERLEIH\ITP_SCHI_PROTO\ITP_SCHI_PROTO\obj\Debug\ITPPROTO.CreateUser.resources

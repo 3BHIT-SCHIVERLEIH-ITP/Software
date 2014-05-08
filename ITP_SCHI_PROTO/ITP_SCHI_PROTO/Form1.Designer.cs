@@ -94,7 +94,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1795, 729);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1354, 729);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -106,11 +106,11 @@
             this.tableLayoutPanel7.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.button_SB_rent, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(901, 77);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(680, 77);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(440, 66);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(330, 66);
             this.tableLayoutPanel7.TabIndex = 5;
             // 
             // label6
@@ -119,7 +119,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(346, 66);
+            this.label6.Size = new System.Drawing.Size(258, 66);
             this.label6.TabIndex = 0;
             this.label6.Text = "Ausgeborgt:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -128,9 +128,9 @@
             // 
             this.button_SB_rent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_SB_rent.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button_SB_rent.Location = new System.Drawing.Point(355, 3);
+            this.button_SB_rent.Location = new System.Drawing.Point(267, 3);
             this.button_SB_rent.Name = "button_SB_rent";
-            this.button_SB_rent.Size = new System.Drawing.Size(82, 60);
+            this.button_SB_rent.Size = new System.Drawing.Size(60, 60);
             this.button_SB_rent.TabIndex = 1;
             this.button_SB_rent.Text = "auszahl";
             this.button_SB_rent.UseVisualStyleBackColor = true;
@@ -144,11 +144,11 @@
             this.tableLayoutPanel6.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.button_SB_overrent, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(1348, 77);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(1017, 77);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(443, 66);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(333, 66);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
             // label5
@@ -157,7 +157,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(348, 66);
+            this.label5.Size = new System.Drawing.Size(260, 66);
             this.label5.TabIndex = 0;
             this.label5.Text = "Überzogen:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,9 +166,9 @@
             // 
             this.button_SB_overrent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_SB_overrent.ForeColor = System.Drawing.Color.Red;
-            this.button_SB_overrent.Location = new System.Drawing.Point(357, 3);
+            this.button_SB_overrent.Location = new System.Drawing.Point(269, 3);
             this.button_SB_overrent.Name = "button_SB_overrent";
-            this.button_SB_overrent.Size = new System.Drawing.Size(83, 60);
+            this.button_SB_overrent.Size = new System.Drawing.Size(61, 60);
             this.button_SB_overrent.TabIndex = 1;
             this.button_SB_overrent.Text = "overrent";
             this.button_SB_overrent.UseVisualStyleBackColor = true;
@@ -182,11 +182,11 @@
             this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.button_SK_overrent, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(1348, 4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(1017, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(443, 66);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(333, 66);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // label4
@@ -195,7 +195,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(348, 66);
+            this.label4.Size = new System.Drawing.Size(260, 66);
             this.label4.TabIndex = 0;
             this.label4.Text = "Überzogen:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,9 +204,9 @@
             // 
             this.button_SK_overrent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_SK_overrent.ForeColor = System.Drawing.Color.Red;
-            this.button_SK_overrent.Location = new System.Drawing.Point(357, 3);
+            this.button_SK_overrent.Location = new System.Drawing.Point(269, 3);
             this.button_SK_overrent.Name = "button_SK_overrent";
-            this.button_SK_overrent.Size = new System.Drawing.Size(83, 60);
+            this.button_SK_overrent.Size = new System.Drawing.Size(61, 60);
             this.button_SK_overrent.TabIndex = 1;
             this.button_SK_overrent.Text = "overrent";
             this.button_SK_overrent.UseVisualStyleBackColor = true;
@@ -220,11 +220,11 @@
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button_SK_rent, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(901, 4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(680, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(440, 66);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(330, 66);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // label3
@@ -233,7 +233,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(346, 66);
+            this.label3.Size = new System.Drawing.Size(258, 66);
             this.label3.TabIndex = 0;
             this.label3.Text = "Ausgeborgt:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,9 +242,9 @@
             // 
             this.button_SK_rent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_SK_rent.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button_SK_rent.Location = new System.Drawing.Point(355, 3);
+            this.button_SK_rent.Location = new System.Drawing.Point(267, 3);
             this.button_SK_rent.Name = "button_SK_rent";
-            this.button_SK_rent.Size = new System.Drawing.Size(82, 60);
+            this.button_SK_rent.Size = new System.Drawing.Size(60, 60);
             this.button_SK_rent.TabIndex = 1;
             this.button_SK_rent.Text = "auszahl";
             this.button_SK_rent.UseVisualStyleBackColor = true;
@@ -256,7 +256,7 @@
             this.TXTLABELSCHI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TXTLABELSCHI.Location = new System.Drawing.Point(4, 1);
             this.TXTLABELSCHI.Name = "TXTLABELSCHI";
-            this.TXTLABELSCHI.Size = new System.Drawing.Size(441, 72);
+            this.TXTLABELSCHI.Size = new System.Drawing.Size(331, 72);
             this.TXTLABELSCHI.TabIndex = 0;
             this.TXTLABELSCHI.Text = "Schi";
             this.TXTLABELSCHI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,7 +267,7 @@
             this.TXTLABELSNOWB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TXTLABELSNOWB.Location = new System.Drawing.Point(4, 74);
             this.TXTLABELSNOWB.Name = "TXTLABELSNOWB";
-            this.TXTLABELSNOWB.Size = new System.Drawing.Size(441, 72);
+            this.TXTLABELSNOWB.Size = new System.Drawing.Size(331, 72);
             this.TXTLABELSNOWB.TabIndex = 1;
             this.TXTLABELSNOWB.Text = "Snowbord";
             this.TXTLABELSNOWB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,11 +280,11 @@
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button_SK_anz, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(452, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(342, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(442, 66);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(331, 66);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // label1
@@ -293,7 +293,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 66);
+            this.label1.Size = new System.Drawing.Size(258, 66);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gesamtanzahl";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,9 +301,9 @@
             // button_SK_anz
             // 
             this.button_SK_anz.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_SK_anz.Location = new System.Drawing.Point(356, 3);
+            this.button_SK_anz.Location = new System.Drawing.Point(267, 3);
             this.button_SK_anz.Name = "button_SK_anz";
-            this.button_SK_anz.Size = new System.Drawing.Size(83, 60);
+            this.button_SK_anz.Size = new System.Drawing.Size(61, 60);
             this.button_SK_anz.TabIndex = 1;
             this.button_SK_anz.Text = "geszahl";
             this.button_SK_anz.UseVisualStyleBackColor = true;
@@ -317,11 +317,11 @@
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button_SB_anz, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(452, 77);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(342, 77);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(442, 66);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(331, 66);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // label2
@@ -330,7 +330,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(347, 66);
+            this.label2.Size = new System.Drawing.Size(258, 66);
             this.label2.TabIndex = 0;
             this.label2.Text = "Gesamtanzahl";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,9 +338,9 @@
             // button_SB_anz
             // 
             this.button_SB_anz.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_SB_anz.Location = new System.Drawing.Point(356, 3);
+            this.button_SB_anz.Location = new System.Drawing.Point(267, 3);
             this.button_SB_anz.Name = "button_SB_anz";
-            this.button_SB_anz.Size = new System.Drawing.Size(83, 60);
+            this.button_SB_anz.Size = new System.Drawing.Size(61, 60);
             this.button_SB_anz.TabIndex = 1;
             this.button_SB_anz.Text = "geszahl";
             this.button_SB_anz.UseVisualStyleBackColor = true;
@@ -356,7 +356,7 @@
             this.tbox_LOG_bottom.Multiline = true;
             this.tbox_LOG_bottom.Name = "tbox_LOG_bottom";
             this.tbox_LOG_bottom.ReadOnly = true;
-            this.tbox_LOG_bottom.Size = new System.Drawing.Size(1787, 140);
+            this.tbox_LOG_bottom.Size = new System.Drawing.Size(1346, 140);
             this.tbox_LOG_bottom.TabIndex = 6;
             // 
             // tableLayoutPanel8
@@ -381,15 +381,15 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.31193F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 134F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1787, 428);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1346, 428);
             this.tableLayoutPanel8.TabIndex = 7;
             // 
             // button_SK_modi
             // 
             this.button_SK_modi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_SK_modi.Location = new System.Drawing.Point(897, 295);
+            this.button_SK_modi.Location = new System.Drawing.Point(676, 295);
             this.button_SK_modi.Name = "button_SK_modi";
-            this.button_SK_modi.Size = new System.Drawing.Size(886, 129);
+            this.button_SK_modi.Size = new System.Drawing.Size(666, 129);
             this.button_SK_modi.TabIndex = 6;
             this.button_SK_modi.Text = "Change";
             this.button_SK_modi.UseVisualStyleBackColor = true;
@@ -402,7 +402,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Location = new System.Drawing.Point(4, 1);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1779, 40);
+            this.label7.Size = new System.Drawing.Size(1338, 40);
             this.label7.TabIndex = 0;
             this.label7.Text = "bearbeiten";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,7 +414,7 @@
             this.radioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radioButton1.Location = new System.Drawing.Point(4, 45);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(886, 110);
+            this.radioButton1.Size = new System.Drawing.Size(665, 110);
             this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "zurückgeben";
@@ -427,9 +427,9 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton2.Location = new System.Drawing.Point(897, 45);
+            this.radioButton2.Location = new System.Drawing.Point(676, 45);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(886, 110);
+            this.radioButton2.Size = new System.Drawing.Size(666, 110);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "ausborgen";
@@ -443,15 +443,15 @@
             this.textBox1.Location = new System.Drawing.Point(4, 162);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(886, 126);
+            this.textBox1.Size = new System.Drawing.Size(665, 126);
             this.textBox1.TabIndex = 3;
             // 
             // button_SK_Scan
             // 
             this.button_SK_Scan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_SK_Scan.Location = new System.Drawing.Point(897, 162);
+            this.button_SK_Scan.Location = new System.Drawing.Point(676, 162);
             this.button_SK_Scan.Name = "button_SK_Scan";
-            this.button_SK_Scan.Size = new System.Drawing.Size(886, 126);
+            this.button_SK_Scan.Size = new System.Drawing.Size(666, 126);
             this.button_SK_Scan.TabIndex = 4;
             this.button_SK_Scan.Text = "Scan";
             this.button_SK_Scan.UseVisualStyleBackColor = true;
@@ -462,7 +462,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Location = new System.Drawing.Point(4, 295);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(886, 129);
+            this.button1.Size = new System.Drawing.Size(665, 129);
             this.button1.TabIndex = 7;
             this.button1.Text = "Kunde wählen";
             this.button1.UseVisualStyleBackColor = true;
@@ -472,7 +472,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1795, 729);
+            this.ClientSize = new System.Drawing.Size(1354, 729);
             this.Controls.Add(this.tableLayoutPanel1);
             this.IsMdiContainer = true;
             this.MaximizeBox = false;

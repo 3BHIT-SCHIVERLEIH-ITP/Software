@@ -14,6 +14,8 @@ namespace ITPPROTO
     {
         private int aktualuser=0;
         bool finish;
+
+
         public KundenBearbeitung()
         {
             InitializeComponent();
