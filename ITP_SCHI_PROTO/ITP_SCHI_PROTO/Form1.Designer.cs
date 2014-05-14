@@ -399,13 +399,11 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton1.Checked = true;
             this.radioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radioButton1.Location = new System.Drawing.Point(4, 45);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(665, 110);
             this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "zurückgeben";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -420,7 +418,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(666, 110);
             this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "ausborgen";
             this.radioButton2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radioButton2.UseVisualStyleBackColor = true;

@@ -256,19 +256,9 @@ namespace ITPPROTO
                 aid = int.Parse(textBox1.Text);
                 if (op == 1)
                 {
-                    command.CommandText = "Select max(?id) from abrechnung;";
-                    command.Parameters.Add("?id", MySqlDbType.VarChar).Value = "id";
-                    connection.Open();
-                    Reader = command.ExecuteReader();
-                    int id=0;
-                    while (Reader.Read())
-                    {
-                        id = int.Parse(Reader.GetValue(0).ToString());
-                        id++;
-                    }
+                    
                     command.Connection.Close();
-                    command.CommandText = "Update abrechnung set zurueckgegeben=true where kid like ?kid and aid like ?aid";
-                    command.Parameters.Add("?id", MySqlDbType.Int16).Value = id;
+                    command.CommandText = "Update abrechnung set zurueckgegeben=true where kid like ?kid and aid like ?aid";                  
                     command.Parameters.Add("?date", MySqlDbType.Date).Value = convert_date(datum);
                     command.Parameters.Add("?kid", MySqlDbType.Int16).Value = kid;
                     command.Parameters.Add("?aid", MySqlDbType.Int16).Value = aid;
@@ -332,6 +322,7 @@ namespace ITPPROTO
             else
             {
                 tbox_LOG_bottom.Text = "Kundenid: " + kunden_id + ", Artikelid: " + textBox1.Text;
+                mysql_edit();
             }
         }
         private void kchosen(){

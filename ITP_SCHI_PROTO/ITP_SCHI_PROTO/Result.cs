@@ -24,15 +24,17 @@ namespace ITPPROTO
         }
         private void loadUP()
         {
+            Object[][] gg;
             MySqlConnection connection = new MySqlConnection("SERVER=localhost;" +
                            "DATABASE=itp_proto;" +
                            "UID=itp;" +
                            "PASSWORD=rent;");
             MySqlCommand command = connection.CreateCommand();
             MySqlDataReader r;
-            command.CommandText = "select vorname, nachname, adresse from kunde;";
+            command.CommandText = "select distinct(kunde.id) from abrechnung inner join kunde on kid = kunde.id;";
             connection.Open();
             r = command.ExecuteReader();
+            int j = r.RecordsAffected;
             while (r.Read())
             {
                 string row = "";
