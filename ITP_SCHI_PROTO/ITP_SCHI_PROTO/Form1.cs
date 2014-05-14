@@ -293,7 +293,7 @@ namespace ITPPROTO
                         id++;
                         connection.Close();
                         command = new MySqlCommand();
-                        command.CommandText = "INSERT INTO abrechnung VALUES(?id,?date,?kid,?aid,false)";
+                        command.CommandText = "INSERT INTO abrechnung VALUES(null,null,?date,?kid,?aid,false)";
                         command.Parameters.Add("?id", MySqlDbType.Int32).Value = id;
                         command.Parameters.Add("?date", MySqlDbType.Date).Value = convert_date(datum);
                         command.Parameters.Add("?kid", MySqlDbType.Int32).Value = kid;
@@ -360,7 +360,7 @@ namespace ITPPROTO
                 kalender kb = new kalender();
                 kb.TheParent = this;
                 kb.Show();
-                String s = "Insert into abrechnung VALUES ((select (max(id)+1) from abrechnung),'2014-04-21'," + this.kunden_id + "," + textBox1.ToString() + ",false);";
+                String s = "Insert into abrechnung VALUES (null,null,'2014-04-21'," + this.kunden_id + "," + textBox1.ToString() + ",false);";
                 mslq(s);
             }
         }
