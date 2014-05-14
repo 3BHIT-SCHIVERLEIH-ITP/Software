@@ -52,12 +52,12 @@
             this.tbox_LOG_bottom = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button_SK_modi = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_SK_Scan = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button_abrechnung = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -367,12 +367,12 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Controls.Add(this.button_SK_modi, 1, 3);
-            this.tableLayoutPanel8.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.radioButton1, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.radioButton2, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.textBox1, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.button_SK_Scan, 1, 2);
             this.tableLayoutPanel8.Controls.Add(this.button1, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.button_abrechnung, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 150);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -394,18 +394,6 @@
             this.button_SK_modi.Text = "Change";
             this.button_SK_modi.UseVisualStyleBackColor = true;
             this.button_SK_modi.Click += new System.EventHandler(this.button_SK_modi_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.tableLayoutPanel8.SetColumnSpan(this.label7, 2);
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(4, 1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1338, 40);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "bearbeiten";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // radioButton1
             // 
@@ -469,6 +457,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button_abrechnung
+            // 
+            this.tableLayoutPanel8.SetColumnSpan(this.button_abrechnung, 2);
+            this.button_abrechnung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_abrechnung.Location = new System.Drawing.Point(4, 4);
+            this.button_abrechnung.Name = "button_abrechnung";
+            this.button_abrechnung.Size = new System.Drawing.Size(1338, 34);
+            this.button_abrechnung.TabIndex = 8;
+            this.button_abrechnung.Text = "Abrechnung";
+            this.button_abrechnung.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -527,13 +526,13 @@
         private System.Windows.Forms.Button button_SB_anz;
         private System.Windows.Forms.TextBox tbox_LOG_bottom;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_SK_Scan;
         private System.Windows.Forms.Button button_SK_modi;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_abrechnung;
     }
 }
 
