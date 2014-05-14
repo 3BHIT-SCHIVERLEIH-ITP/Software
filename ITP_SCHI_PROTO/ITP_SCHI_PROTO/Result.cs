@@ -13,6 +13,10 @@ namespace ITPPROTO
 {
     public partial class ResultSelect : Form
     {
+
+        private int current_id = 0;
+
+
         public ResultSelect()
         {
             InitializeComponent();
@@ -48,7 +52,13 @@ namespace ITPPROTO
         }
         private void checkedListBox_kunde_SelectedIndexChanged(object sender, EventArgs e)
         {
+            current_id = checkedListBox_kunde.SelectedIndex + 1;
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //neue FORM anzeigen
+            
         }
     }
 }
