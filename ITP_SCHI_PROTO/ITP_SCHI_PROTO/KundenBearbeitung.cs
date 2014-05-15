@@ -16,6 +16,10 @@ namespace ITPPROTO
         private int aktualuser=0;
         bool finish;
 
+        MySqlConnection connection = new MySqlConnection("SERVER=localhost;" +
+                           "DATABASE=itp_proto;" +
+                           "UID=itp;" +
+                           "PASSWORD=rent;");
 
         public KundenBearbeitung()
         {
@@ -23,14 +27,18 @@ namespace ITPPROTO
             loadUP();
         }
 
+        public KundenBearbeitung(string s)
+        {
+            InitializeComponent();
+            loadUP();
+            connection = new MySqlConnection(s);
+        }
+
         private void loadUP()
         {   
 
 
-            MySqlConnection connection = new MySqlConnection("SERVER=localhost;" +
-                           "DATABASE=itp_proto;" +
-                           "UID=itp;" +
-                           "PASSWORD=rent;");
+            
             MySqlCommand command = connection.CreateCommand();
             MySqlDataReader r;
             command.CommandText = "select vorname, nachname, adresse from kunde;";

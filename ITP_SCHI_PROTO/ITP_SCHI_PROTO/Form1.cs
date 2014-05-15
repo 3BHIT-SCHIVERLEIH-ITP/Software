@@ -25,6 +25,12 @@ namespace ITPPROTO
             InitializeComponent();
             loadUP();
         }
+        public Form1(string connect)
+        {
+            this.myConnectionString = connect;
+            InitializeComponent();
+            loadUP();
+        }
         private void loadUP()
         {
             //ski anzahl button text

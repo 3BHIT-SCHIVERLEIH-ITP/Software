@@ -16,19 +16,26 @@ namespace ITPPROTO
 
         private int current_id = 0;
 
+        MySqlConnection connection = new MySqlConnection("SERVER=localhost;" +
+                           "DATABASE=itp_proto;" +
+                           "UID=itp;" +
+                           "PASSWORD=rent;");
 
         public ResultSelect()
         {
             InitializeComponent();
             loadUP();
         }
+        public ResultSelect(string sc)
+        {
+            InitializeComponent();
+            loadUP();
+            connection = new MySqlConnection(sc);
+        }
         private void loadUP()
         {
             Object[][] gg;
-            MySqlConnection connection = new MySqlConnection("SERVER=localhost;" +
-                           "DATABASE=itp_proto;" +
-                           "UID=itp;" +
-                           "PASSWORD=rent;");
+            
             MySqlCommand command = connection.CreateCommand();
             MySqlDataReader r;
             command.CommandText = "select distinct(kunde.id) from abrechnung inner join kunde on kid = kunde.id;";

@@ -17,6 +17,11 @@ namespace ITPPROTO
         {
             InitializeComponent();
         }
+        public CreateUser(string s)
+        {
+            InitializeComponent();
+            myConnectionString = s;
+        }
         public void db_newUser()
         {
             
